@@ -1,0 +1,90 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine(System.DateTime.Now.ToString());
+            if (DateTime.Now.Hour < 12)
+            {
+                Console.WriteLine("Good Morning");
+            }
+            else if (DateTime.Now.Hour <18)
+            {
+                Console.WriteLine("Good Afternoon");
+
+            }
+            else if(DateTime.Now.Hour>6 &&DateTime.Now.Hour<8)
+
+            {
+                Console.WriteLine("Good Evening");
+            }
+            else
+            {
+                Console.WriteLine("Good night");
+            }
+            Console.Write("First Number:");
+            String number1 = Console.ReadLine();
+            //int num1 = Convert.ToInt32(number1);
+           
+            Double num1 = Convert.ToDouble(number1);
+            Console.Write("Second Number :");
+            String number2 = Console.ReadLine();
+            //int num2 = Convert.ToInt32(number2);
+            Double num2 = Convert.ToDouble(number2);
+            Double ans;
+            Console.Write("Enter Operator:");
+            String check = Console.ReadLine();
+            if (check == "+")
+            {
+                ans = num1 + num2;
+                Console.WriteLine("Answer:"+ans);
+                Console.ReadLine();
+            }
+            else if (check == "-")
+            {
+                ans = num1 - num2;
+                Console.WriteLine("Answer:"+ans);
+                Console.ReadLine();
+            }
+            else if (check == "*")
+            {
+                ans = num1 * num2;
+                Console.WriteLine("Answer:"+ans);
+                Console.ReadLine();
+            }
+            else if (check == "/")
+            {
+                
+                if (num2 == 0)
+                {
+                    Console.WriteLine("Secoend Number Never Be 0");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    ans = num1 / num2;
+                    Console.WriteLine("Answer:" + ans);
+                    Console.ReadLine();
+                }
+                }
+            else
+            {
+                Console.WriteLine("Sorry Wrong operator");
+                Console.ReadLine();
+            }
+
+
+
+            
+
+        }
+    }
+}
